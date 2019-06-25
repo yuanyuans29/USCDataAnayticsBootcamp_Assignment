@@ -8,6 +8,7 @@ inputField.on("change", function() {
     var inputdate = d3.event.target.value;
     console.log(inputdate);
     filterbtn.on("click", function() {
+        d3.select("tbody").html("")
         // inputField.on("change", function() {
         //     var inputdate = d3.event.target.value;
         //     console.log(inputdate)
