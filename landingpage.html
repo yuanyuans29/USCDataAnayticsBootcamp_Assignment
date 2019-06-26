@@ -8,47 +8,187 @@
     <title>summary</title>
     <style>
         /* h1 heading tag */
-         h1 {
-        /* Put a 15-pixel margin at the bottom of the heading. */
-        margin-bottom: 15px;
-        /* Change the size of your font to 60 pixels high. */
-        font-size: 40px;
-        /* This will color the heading font white. */
-        color: white;
-        /* Align the text to the center of its enclosing element (e.g. div). */
-        text-align: center;
-        /* The background of the heading element will now be black. */
-        background-color: green;
+        * {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: rgb(224, 223, 223);
         }
+        .navbar {
+            margin-top: 0;
+            margin-bottom: 20px;
+            height: 80px;
+            background-color:whitesmoke;
+        }
+        .main,.buttons {
+            display: inline-block;
+            text-align: center;          
+        }
+        /* .button,.brand
+        {
+            display:inline;
+            } */
+        /* .brand {
+            height:100px;
+            width: 100px;
+            background-color:rgb(44, 97, 44);
+            margin-left: 50px;
+        } */
+        .main {
+            font-size: 25px;
+            font-weight:700;
+            color:white;
+            text-align: center;
+            display:block;
+            background-color:rgb(44, 97, 44);
+            margin-left: 50px;
+            height:80px;
+            width: 100px;
+        }
+        .navbar ul {
+            display: inline-block;
+            text-align: center;
+        }
+        .side {
+            font-size: 20px;
+            color:gray;
+            text-align: right;
+            height:80px;
+            width: 100px;
+            margin-right: 20px;
+            background-color:white;
+        }
+        .button {
+            background-color:white;
+            margin-right: 50px;
+            text-align: right;
+        }
+        .summary {
+            margin-top: 40px;
+            margin-left: 40px;
+            margin-right:10px;
+            margin-bottom: 0;
+            height: 600px;
+            background-color: white;
+        }
+        .img1 {
+            margin-top:30px;
+            float: left;
+            }
+        p {
+            margin-top: 300px;
+            margin-bottom:30px;
+            font-size: 15px;
+            color: gray;
+            line-height:30px;
+            text-align: left;
+            background-color: white;
+        }
+        .heading {
+            margin-top:60px;
+            margin-bottom:20px;
+            color:rgb(54, 107, 54);
+            font-size: 30px;
+            text-align: left;
+            font-weight: 700;
+            background-color: white;
+             }
+        .subheading {
+            margin-top:60px;
+            margin-bottom:10px;
+            color:rgb(54, 107, 54);
+            font-size: 25px;
+            text-align: left;
+            font-weight: 700;
+            background-color: white;
+        }
+        .visualization {
+            margin-top: 40px;
+            margin-left: 20px;
+            margin-right: 40px;
+            height: 500px;
+            background-color: white;
+        }
+        .img2 {
+            margin:0;
+            align-self: auto;
+            }
         a {
-        /* Put a 15-pixel margin at the bottom of the heading. */
         margin-bottom: 15px;
-        /* Change the size of your font to 60 pixels high. */
         font-size: 15px;
-        /* This will color the heading font white. */
         color: gray;
-        /* Align the text to the center of its enclosing element (e.g. div). */
-        text-align: center;
-        /* The background of the heading element will now be black. */
+        text-align: left;
         background-color: white;
         }
+
+        .dropbtn {
+        background-color: #4CAF50;
+        color: white;
+        padding: 16px;
+        font-size: 16px;
+        border: none;
+        }
+
+        .dropdown {
+        position: relative;
+        display: inline-block;
+        }
+
+        .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        }
+
+        .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        }
+
+        .dropdown-content a:hover {background-color: #ddd;}
+
+        .dropdown:hover .dropdown-content {display: block;}
+
+        .dropdown:hover .dropbtn {background-color: #3e8e41;}
     </style>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 
 <body>
     <!-- Navbar -->
-    <div class="navbar page_top col-md-12">
-        <!-- Main Label -->
-        <div class="main_label col-md-2" style="letter-spacing:4px;">
-            <h1 class="heading">Latitude</h4>
-        </div>
-        <div class="site-top-right col-md-4" style="letter-spacing:4px;">
-            <a href="" class="nav_dropdown_list">Plots</a>
-            <a href="" class="nav_button">Comparison</a>
-            <a href="" class="nav_button">Data</a>
-        </div>
+    <div class="navbar col-md-12" id="navbar">
+        <a href="#home" class="main">Latitude</a>
+        <!-- Main  -->
+        <ul class="buttons" style="letter-spacing:4px;">
+            <ul class="list">
+                <a href="" class="plots">Plots</a>
+                <div class="menu" >
+                    <a class="figure" href="#">Max Temperature</a>
+                    <a class="figure" href="#">Humidity</a>
+                    <a class="figure" href="#">Cloudiness</a>
+                    <a class="figure" href="#">Wind Speed</a>
+                </div>
+                <div class="dropdown">
+                        <button class="dropbtn">Dropdown</button>
+                        <div class="dropdown-content">
+                          <a href="#">Link 1</a>
+                          <a href="#">Link 2</a>
+                          <a href="#">Link 3</a>
+                        </div>
+                      </div>
+            </ul>
+            <ul>
+                <a href="" class="comparison">Comparison</a>
+            </ul>
+            <ul>
+                <a href="" class="data">Data</a>
+            </ul>
+        </ul>
     </div>
+
     <!-- <div class="jumbotron text-center">
       <h1>Mission to Mars</h1>
       <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data</a></p>
@@ -56,25 +196,26 @@
 
     <!-- Mars Data -->
     <div class="row" id="view_page">
-        <div class="col-md-8">
-            <h4 class="heading">Summary: Latitude vs. X</h4>
-                <img src="Resources/assets/images/Fig1.png" title="Example Image Link" width="600" height="400" ALIGN=”left”/>
+        <div class="summary col-md-7">
+            <h1 class="heading">Summary: Latitude vs. X</h1>
+                <img class="img1" src="Resources/assets/images/Fig1.png" title="plot example" width="400" height="400" ALIGN=”left”/>
                 <p>The purpose of this project was to analyze how weather changes as you get closer
                     to the equator. To accomplish this analysis, we first pulled data from the OpenWeatherMap API to assemble
                     a dataset on over 500 cities.
                 </p>
-                <p>After assembling the dataset, we used Matplotlib to plot various aspects of the weather vs.
+                <p>
+                    After assembling the dataset, we used Matplotlib to plot various aspects of the weather vs.
                     latitude. Factors we looked as included temperature, cloudiness, wind speed, and humidity. This site provides 
                     the source data and visualizations created as part of the analysis, as well as explanations and descriptions of any
                     trends and correlations witnessed. 
                     </p>
-            </div>
-            <div class="col-md-4">
-                <h4 class="heading">Visualizations</h4>
-                <img src="Resources/assets/images/Fig1.png" title="Example Image Link" width="200" height="100" />
-                <img src="Resources/assets/images/Fig2.png" title="Example Image Link" width="200" height="100" />
-                <img src="Resources/assets/images/Fig3.png" title="Example Image Link" width="200" height="100" />
-                <img src="Resources/assets/images/Fig4.png" title="Example Image Link" width="200" height="100" />
+        </div>
+            <div class="visualization col-md-4">
+                <h4 class="subheading">Visualizations</h4>
+                <img class="img2" src="Resources/assets/images/Fig1.png" title="Example Image Link" width="200" height="200" />
+                <img class="img2" src="Resources/assets/images/Fig2.png" title="Example Image Link" width="200" height="200" />
+                <img class="img2" src="Resources/assets/images/Fig3.png" title="Example Image Link" width="200" height="200" />
+                <img class="img2" src="Resources/assets/images/Fig4.png" title="Example Image Link" width="200" height="200" />
             </div>
         </div>
     </div>
