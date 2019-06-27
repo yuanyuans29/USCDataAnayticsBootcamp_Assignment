@@ -55,6 +55,8 @@
             }
             .dropdown {
                 background-color: whitesmoke;
+                position: relative;
+                display: inline-block;
             }
             .navbar-nav {
             /* font-size: 20px;
@@ -74,12 +76,12 @@
                 display: inline;
                 text-align: center;
                 /* position: relative; */
-            .navbar-brand {
+            /* .navbar-brand {
                 float:left;
             }
             .navbar-nav {
                 float:right;
-            } 
+            }  */
                 /* a {
         margin-bottom: 15px;
         font-size: 15px;
@@ -110,12 +112,13 @@
         .dropdown-menu a {
         color: gray;
         padding: 12px 16px;
+        text-decoration: none;
         display: block;
         }
 
         .dropdown-menu a:hover {background-color: whitesmoke;}
 
-        .dropdown-toggle .dropdown-menu {display: block;}
+        .dropdown:hover .dropdown-menu {display: block;}
 
         .dropdown:hover .dropdown-toggle {background-color: whitesmoke;}
 
@@ -126,37 +129,37 @@
             color:gray;
             background-color: whitesmoke;
         } */ 
-        .summary {
+        .summaryblock {
             margin-top: 40px;
             margin-left: 40px;
             margin-right:10px;
             margin-bottom: 0;
-            height: 650px;
-            background-color: white;
+            height: 600px;
+            background-color: whitesmoke;
             padding:10px
         }
         .img1 {
-            margin-top:30px;
-            float: left;
+            margin-top:20px;
+            /* float: left; */
             }
         p {
-            margin-top: 300px;
+            margin-top: 20px;
             margin-bottom:30px;
             font-size: 20px;
             color: gray;
-            line-height:30px;
+            line-height:25px;
             text-align: left;
-            background-color: white;
+            background-color: whitesmoke;
             padding: 2%;
         }
-        .heading {
+        .summary {
             margin-top:40px;
             margin-bottom:20px;
             color:rgb(54, 107, 54);
             font-size: 50px;
             text-align: left;
             font-weight: 700;
-            background-color: white;
+            background-color: whitesmoke;
              }
         .subheading {
             margin-top:60px;
@@ -165,33 +168,32 @@
             font-size: 40px;
             text-align: left;
             font-weight: 700;
-            background-color: white;
+            background-color: whitesmoke;
         }
         .visualization {
             margin-top: 40px;
             margin-left: 20px;
             margin-right: 40px;
             height: 580px;
-            background-color: white;
+            background-color: whitesmoke;
         }
         .img2 {
             margin:0;
-            align-self: auto;
             }
     </style>
 </head>
 
 <body>
     <!-- Navbar -->
-    <div class="container-fluid">
+    <div class="container-fluid col-lg-12 col-sm-12">
         <nav class="navbar navbar-expand-md navbar-light bg-light navbar-fixed-top">
             <a href="landingpage.html" class="navbar-brand">Latitude</a>
             <!-- Main  -->
-            <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
                 <div class="navbar-nav">
                 <!-- <ul class="plotbutton"> -->
                     <div class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" data-toggle="dropdown">Plots</a>
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href ="visualizationpageone.html">Plots</a>
                         <div class="dropdown-menu">
                     <!-- <div class="menu" > -->
                             <a class="dropdown-item" href="visualizationpageone.html">Max Temperature</a>
@@ -218,27 +220,34 @@
     </div> -->
 
     <!-- Mars Data -->
-    <div class="row" id="view_page">
-        <div class="summary col-md-7 col-sm-12">
-            <h1 class="heading">Summary: Latitude vs. X</h1>
-                <img class="img1" src="Resources/assets/images/Fig1.png" title="plot example" width="600" height="400" ALIGN=”left”/>
+    <div class="container-fluid">
+        <div class="row">
+            <div class = "summaryblock col-lg-6 col-sm-12">
+                <h1 class="summary">Summary: Latitude vs. X</h1>
+                <img class="img1 float-left" src="Resources/assets/images/Fig1.png" title="plot example" width="400" height="400" ALIGN=”left”/>
                 <p>The purpose of this project was to analyze how weather changes as you get closer
                     to the equator. To accomplish this analysis, we first pulled data from the OpenWeatherMap API to assemble
                     a dataset on over 500 cities.
                 </p>
-                <p>
-                    After assembling the dataset, we used Matplotlib to plot various aspects of the weather vs.
+                <p>After assembling the dataset, we used Matplotlib to plot various aspects of the weather vs.
                     latitude. Factors we looked as included temperature, cloudiness, wind speed, and humidity. This site provides 
                     the source data and visualizations created as part of the analysis, as well as explanations and descriptions of any
                     trends and correlations witnessed. 
-                    </p>
-        </div>
-            <div class="visualization col-md-4 col-sm-12">
+                </p>
+            </div>
+            <div class = "visualization col-lg-5 col-sm-12">
                 <h4 class="subheading">Visualizations</h4>
-                <img class="img2" src="Resources/assets/images/Fig1.png" title="Figure 1 link" width="270" height="220" />
-                <img class="img2" src="Resources/assets/images/Fig2.png" title="Figure 2 link" width="270" height="220" />
-                <img class="img2" src="Resources/assets/images/Fig3.png" title="Figure 3 link" width="270" height="220" />
-                <img class="img2" src="Resources/assets/images/Fig4.png" title="Figure 4 link" width="270" height="220" />
+                        <img class="img2 float-left" src="Resources/assets/images/Fig1.png" title="Figure 1 link" width="300" height="220" />
+                        <img class="img2 float-right" src="Resources/assets/images/Fig3.png" title="Figure 2 link" width="300" height="220" />
+                        <img class="img2 float-left" src="Resources/assets/images/Fig2.png" title="Figure 3 link" width="300" height="220" />
+                        <img class="img2 float-right" src="Resources/assets/images/Fig4.png" title="Figure 4 link" width="300" height="220" />
+            </div>
+            <div class = "visualization col-sm-12">
+                    <h4 class="subheading">Visualizations</h4>
+                            <img class="img2 float-left" src="Resources/assets/images/Fig1.png" title="Figure 1 link" width="100" height="100" />
+                            <img class="img2 float-right" src="Resources/assets/images/Fig3.png" title="Figure 2 link" width="100" height="100" />
+                            <img class="img2 float-left" src="Resources/assets/images/Fig2.png" title="Figure 3 link" width="100" height="100" />
+                            <img class="img2 float-right" src="Resources/assets/images/Fig4.png" title="Figure 4 link" width="100" height="100" />
             </div>
         </div>
     </div>
