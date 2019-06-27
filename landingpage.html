@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>summary</title>
+    <!-- !-- <link re<l="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous"> --> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <style>
         /* h1 heading tag */
         * {
@@ -13,41 +15,33 @@
             background-color: rgb(224, 223, 223);
         }
         .navbar {
-            margin-top: 0;
-            margin-bottom: 20px;
-            height: 80px;
+            /* margin-top: 0; */
+            /* margin-bottom: 20px; */
+            height: 100px;
             background-color:whitesmoke;
-        }
-        .main,.buttons {
-            display: inline-block;
-            text-align: center;          
-        }
-        /* .button,.brand
-        {
-            display:inline;
-            } */
-        /* .brand {
-            height:100px;
-            width: 100px;
-            background-color:rgb(44, 97, 44);
-            margin-left: 50px;
-        } */
-        .main {
-            font-size: 25px;
+            position:relative;
+
+            }
+
+        .navbar-brand {
+            font-size: 40px;
             font-weight:700;
-            color:white;
+            color:whitesmoke;
             text-align: center;
             display:block;
-            background-color:rgb(44, 97, 44);
-            margin-left: 50px;
-            height:80px;
-            width: 100px;
+            background-color:rgb(71, 114, 71);
+            margin-left: 100px;
+            height:100px;
+            width: 300px;
+            padding: 16px;
+            border: none; 
+            position:relative;
         }
-        .navbar ul {
+        /* .navbarCollapse {
             display: inline-block;
             text-align: center;
-        }
-        .side {
+        } */
+        /* .side {
             font-size: 20px;
             color:gray;
             text-align: right;
@@ -55,19 +49,91 @@
             width: 100px;
             margin-right: 20px;
             background-color:white;
-        }
-        .button {
-            background-color:white;
-            margin-right: 50px;
+        } */
+            .navbar-collapse {
+                background-color: whitesmoke;
+            }
+            .dropdown {
+                background-color: whitesmoke;
+            }
+            .navbar-nav {
+            /* font-size: 20px;
+            color:gray; */
+            font-weight:700;
+            height:100px;
+            /* width:100px; */
+            margin-right: 30px;
             text-align: right;
+            padding: 30px;
+            border: none;
+            position: relative;
+            display: inline-block;
+            background-color: whitesmoke;
+           }
+            /* .navbar-brand,.navbar-nav {
+                display: inline;
+                text-align: center;
+                /* position: relative; */
+            .navbar-brand {
+                float:left;
+            }
+            .navbar-nav {
+                float:right;
+            } 
+                /* a {
+        margin-bottom: 15px;
+        font-size: 15px;
+        color: gray;
+        text-align: left;
+        background-color: white;
+        } */
+
+        /* .navbar-nav {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: whitesmoke;
+        color: gray;
+        padding: 30px;
+        border: none;
+        position: relative;
+        display: inline-block;
+        } */
+
+        .dropdown-menu {
+        display:none;
+        position: absolute;
+        background-color: whitesmoke;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
         }
+
+        .dropdown-menu a {
+        color: gray;
+        padding: 12px 16px;
+        display: block;
+        }
+
+        .dropdown-menu a:hover {background-color: whitesmoke;}
+
+        .dropdown-toggle .dropdown-menu {display: block;}
+
+        .dropdown:hover .dropdown-toggle {background-color: whitesmoke;}
+
+        /* .comparisonbutton {
+            background-color: whitesmoke;
+        }
+        .databutton {
+            color:gray;
+            background-color: whitesmoke;
+        } */ 
         .summary {
             margin-top: 40px;
             margin-left: 40px;
             margin-right:10px;
             margin-bottom: 0;
-            height: 600px;
+            height: 650px;
             background-color: white;
+            padding:10px
         }
         .img1 {
             margin-top:30px;
@@ -76,17 +142,18 @@
         p {
             margin-top: 300px;
             margin-bottom:30px;
-            font-size: 15px;
+            font-size: 20px;
             color: gray;
             line-height:30px;
             text-align: left;
             background-color: white;
+            padding: 2%;
         }
         .heading {
-            margin-top:60px;
+            margin-top:40px;
             margin-bottom:20px;
             color:rgb(54, 107, 54);
-            font-size: 30px;
+            font-size: 50px;
             text-align: left;
             font-weight: 700;
             background-color: white;
@@ -95,7 +162,7 @@
             margin-top:60px;
             margin-bottom:10px;
             color:rgb(54, 107, 54);
-            font-size: 25px;
+            font-size: 40px;
             text-align: left;
             font-weight: 700;
             background-color: white;
@@ -104,89 +171,45 @@
             margin-top: 40px;
             margin-left: 20px;
             margin-right: 40px;
-            height: 500px;
+            height: 580px;
             background-color: white;
         }
         .img2 {
             margin:0;
             align-self: auto;
             }
-        a {
-        margin-bottom: 15px;
-        font-size: 15px;
-        color: gray;
-        text-align: left;
-        background-color: white;
-        }
-
-        .dropbtn {
-        background-color: #4CAF50;
-        color: white;
-        padding: 16px;
-        font-size: 16px;
-        border: none;
-        }
-
-        .dropdown {
-        position: relative;
-        display: inline-block;
-        }
-
-        .dropdown-content {
-        display: none;
-        position: absolute;
-        background-color: #f1f1f1;
-        min-width: 160px;
-        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-        z-index: 1;
-        }
-
-        .dropdown-content a {
-        color: black;
-        padding: 12px 16px;
-        text-decoration: none;
-        display: block;
-        }
-
-        .dropdown-content a:hover {background-color: #ddd;}
-
-        .dropdown:hover .dropdown-content {display: block;}
-
-        .dropdown:hover .dropbtn {background-color: #3e8e41;}
     </style>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 
 <body>
     <!-- Navbar -->
-    <div class="navbar col-md-12" id="navbar">
-        <a href="#home" class="main">Latitude</a>
-        <!-- Main  -->
-        <ul class="buttons" style="letter-spacing:4px;">
-            <ul class="list">
-                <a href="" class="plots">Plots</a>
-                <div class="menu" >
-                    <a class="figure" href="#">Max Temperature</a>
-                    <a class="figure" href="#">Humidity</a>
-                    <a class="figure" href="#">Cloudiness</a>
-                    <a class="figure" href="#">Wind Speed</a>
-                </div>
-                <div class="dropdown">
-                        <button class="dropbtn">Dropdown</button>
-                        <div class="dropdown-content">
-                          <a href="#">Link 1</a>
-                          <a href="#">Link 2</a>
-                          <a href="#">Link 3</a>
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-md navbar-light bg-light navbar-fixed-top">
+            <a href="landingpage.html" class="navbar-brand">Latitude</a>
+            <!-- Main  -->
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav">
+                <!-- <ul class="plotbutton"> -->
+                    <div class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown">Plots</a>
+                        <div class="dropdown-menu">
+                    <!-- <div class="menu" > -->
+                            <a class="dropdown-item" href="visualizationpageone.html">Max Temperature</a>
+                            <a class="dropdown-item" href="visualizationpagetwo.html">Humidity</a>
+                            <a class="dropdown-item" href="visualizationpagethree.html">Cloudiness</a>
+                            <a class="dropdown-item" href="visualizationpagefour.html">Wind Speed</a>
                         </div>
-                      </div>
-            </ul>
-            <ul>
-                <a href="" class="comparison">Comparison</a>
-            </ul>
-            <ul>
-                <a href="" class="data">Data</a>
-            </ul>
-        </ul>
+                    </div>
+                </div>
+                <!-- <ul class="comparisonbutton"> -->
+                <div class="navbar-nav">
+                    <a href="comparisonpage.html" class="nav-item nav-link">Comparison</a>
+                </div>
+                <div class="navbar-nav">
+                    <a href="datapage" class="nav-item nav-link">Data</a>
+                </div>
+            </div>
+        </nav>
     </div>
 
     <!-- <div class="jumbotron text-center">
@@ -196,9 +219,9 @@
 
     <!-- Mars Data -->
     <div class="row" id="view_page">
-        <div class="summary col-md-7">
+        <div class="summary col-md-7 col-sm-12">
             <h1 class="heading">Summary: Latitude vs. X</h1>
-                <img class="img1" src="Resources/assets/images/Fig1.png" title="plot example" width="400" height="400" ALIGN=”left”/>
+                <img class="img1" src="Resources/assets/images/Fig1.png" title="plot example" width="600" height="400" ALIGN=”left”/>
                 <p>The purpose of this project was to analyze how weather changes as you get closer
                     to the equator. To accomplish this analysis, we first pulled data from the OpenWeatherMap API to assemble
                     a dataset on over 500 cities.
@@ -210,12 +233,12 @@
                     trends and correlations witnessed. 
                     </p>
         </div>
-            <div class="visualization col-md-4">
+            <div class="visualization col-md-4 col-sm-12">
                 <h4 class="subheading">Visualizations</h4>
-                <img class="img2" src="Resources/assets/images/Fig1.png" title="Example Image Link" width="200" height="200" />
-                <img class="img2" src="Resources/assets/images/Fig2.png" title="Example Image Link" width="200" height="200" />
-                <img class="img2" src="Resources/assets/images/Fig3.png" title="Example Image Link" width="200" height="200" />
-                <img class="img2" src="Resources/assets/images/Fig4.png" title="Example Image Link" width="200" height="200" />
+                <img class="img2" src="Resources/assets/images/Fig1.png" title="Figure 1 link" width="270" height="220" />
+                <img class="img2" src="Resources/assets/images/Fig2.png" title="Figure 2 link" width="270" height="220" />
+                <img class="img2" src="Resources/assets/images/Fig3.png" title="Figure 3 link" width="270" height="220" />
+                <img class="img2" src="Resources/assets/images/Fig4.png" title="Figure 4 link" width="270" height="220" />
             </div>
         </div>
     </div>
