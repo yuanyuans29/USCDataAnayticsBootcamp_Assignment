@@ -2,14 +2,13 @@
 import os
 import csv
 
-csvpath = os.path.join('03-Python_Homework_Instructions_PyBank_Resources_budget_data.csv')
+csvpath = os.path.join('Resources/budget_data.csv')
 with open(csvpath, newline='') as csvfile:
 
     # CSV reader specifies delimiter and variable that holds contents
     csvreader = csv.reader(csvfile, delimiter=',')
     #skip the header row
     csv_reader = next(csvreader)
-    
     #set date and profit/loss as separate blank arrays and total profit as 0
     date_column = []
     pl_column = []
