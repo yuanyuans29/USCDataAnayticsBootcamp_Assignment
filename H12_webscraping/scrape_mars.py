@@ -34,12 +34,19 @@ def scrape():
     image_url_dict={}
     featured_image_url=[]
     #Loop through each list_text to find news titles and paragraph text
-    for img in img_container:
-            # Identify and return title of news
-            image_url = img.find("img").attrs['src'].strip()
+    for i in img_container:
+        # Identify and return title of news
+        try:
+            image_url = i.find("div",class_ ="img").img["src"].strip()#find("img").get('src').strip()
             image_fullurl = "https://www.jpl.nasa.gov" +image_url
-            image_url_dict["image url"] = image_fullurl
-            featured_image_url.append(image_url_dict)
+            #image_url_dict["image url"] = image_fullurl
+            #featured_image_url.append(image_url_dict)
+            if(image_url):
+                image_url_dict["image url"] = image_fullurl
+                featured_image_url.append(image_url_dict)
+        except AttributeError as e:
+            print(e)
+
     # Mars Weather
     #twitter url 
     twitter_url = "https://twitter.com/marswxreport?lang=en"
@@ -111,10 +118,16 @@ def scrape():
     {"title":hemisphere_title[3],"img_url":vmh_img_url}]
 
     scrape_dict={
-        "news":news,
-        "featured_image_url":featured_image_url,
-        "mars_weather":mars_weather,
-        "mars info":table_df,
-        "hemisphere_image_urls":hemisphere_image_urls
+        "news_title":news[0]["title"],
+        "news_summary":news[0]["summary"],
+        "featured_image_url":featured_image_url[0]["image url"],
+        "mars_weather":mars_weather[1]["mars_weather"],
+        "mars_info": "table",
+        "hemisphere_image_urls1":hemisphere_image_urls[0]["img_url"],
+        "hemisphere_image_urls2":hemisphere_image_urls[1]["img_url"],
+        "hemisphere_image_urls3":hemisphere_image_urls[2]["img_url"],
+        "hemisphere_image_urls4":hemisphere_image_urls[3]["img_url"]
+
     }
+
     return scrape_dict
