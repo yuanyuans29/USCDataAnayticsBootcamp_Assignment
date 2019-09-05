@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>summary</title>
+    <!-- !-- <link re<l="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous"> --> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        /* h1 heading tag */
+        * {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: rgb(224, 223, 223);
+        }
+        .navbar {
+            /* margin-top: 0; */
+            /* margin-bottom: 20px; */
+            height: 100px;
+            background-color:whitesmoke;
+            position:relative;
+
+            }
+
+        .navbar-brand {
+            font-size: 40px;
+            font-weight:700;
+            color:whitesmoke;
+            text-align: center;
+            display:block;
+            background-color:rgb(71, 114, 71);
+            margin-left: 100px;
+            height:100px;
+            width: 300px;
+            padding: 16px;
+            border: none; 
+            position:relative;
+        }
+        /* .navbarCollapse {
+            display: inline-block;
+            text-align: center;
+        } */
+        /* .side {
+            font-size: 20px;
+            color:gray;
+            text-align: right;
+            height:80px;
+            width: 100px;
+            margin-right: 20px;
+            background-color:white;
+        } */
+            .navbar-collapse {
+                background-color: whitesmoke;
+            }
+            .dropdown {
+                background-color: whitesmoke;
+                position: relative;
+                display: inline-block;
+            }
+            .navbar-nav {
+            /* font-size: 20px;
+            color:gray; */
+            font-weight:700;
+            height:100px;
+            /* width:100px; */
+            margin-right: 30px;
+            text-align: right;
+            padding: 30px;
+            border: none;
+            position: relative;
+            display: inline-block;
+            background-color: whitesmoke;
+           }
+            /* .navbar-brand,.navbar-nav {
+                display: inline;
+                text-align: center;
+                /* position: relative; */
+            /* .navbar-brand {
+                float:left;
+            }
+            .navbar-nav {
+                float:right;
+            }  */
+                /* a {
+        margin-bottom: 15px;
+        font-size: 15px;
+        color: gray;
+        text-align: left;
+        background-color: white;
+        } */
+
+        /* .navbar-nav {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: whitesmoke;
+        color: gray;
+        padding: 30px;
+        border: none;
+        position: relative;
+        display: inline-block;
+        } */
+
+        .dropdown-menu {
+        display:none;
+        position: absolute;
+        background-color: whitesmoke;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        }
+
+        .dropdown-menu a {
+        color: gray;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        }
+
+        .dropdown-menu a:hover {background-color: whitesmoke;}
+
+        .dropdown:hover .dropdown-menu {display: block;}
+
+        .dropdown:hover .dropdown-toggle {background-color: whitesmoke;}
+
+        /* .comparisonbutton {
+            background-color: whitesmoke;
+        }
+        .databutton {
+            color:gray;
+            background-color: whitesmoke;
+        } */ 
+        .visualization {
+            margin-top: 40px;
+            margin-left: 40px;
+            margin-right:40px;
+            margin-bottom: 20px;
+            height: 600px;
+            background-color: whitesmoke;
+            align-content: center;
+        }
+        p {
+            margin-bottom:10px;
+            font-size: 20px;
+            color: gray;
+            text-align: left;
+            background-color: whitesmoke;
+            padding:2%;
+        }
+        .title {
+            margin-top:20px;
+            padding: 20px;
+            color:rgb(54, 107, 54);
+            font-size: 50px;
+            text-align: left;
+            font-weight: 700;
+            background-color: whitesmoke;
+             }
+        .subheading {
+            /* margin-top:1px;
+            margin-bottom:10px; */
+            color:rgb(54, 107, 54);
+            font-size: 25px;
+            text-align: center;
+            font-weight: 700;
+            background-color: whitesmoke;
+        }
+        .visuals {
+            background-color: whitesmoke;
+            }
+        .eachplot {
+            background-color: whitesmoke;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <div class="container-fluid col-lg-12 col-sm-12">
+        <nav class="navbar navbar-expand-md navbar-light bg-light navbar-fixed-top">
+            <a href="landingpage.html" class="navbar-brand">Latitude</a>
+            <!-- Main  -->
+            <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
+                <div class="navbar-nav">
+                <!-- <ul class="plotbutton"> -->
+                    <div class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href ="visualizationpageone.html">Plots</a>
+                        <div class="dropdown-menu">
+                    <!-- <div class="menu" > -->
+                            <a class="dropdown-item" href="visualizationpageone.html">Max Temperature</a>
+                            <a class="dropdown-item" href="visualizationpagetwo.html">Humidity</a>
+                            <a class="dropdown-item" href="visualizationpagethree.html">Cloudiness</a>
+                            <a class="dropdown-item" href="visualizationpagefour.html">Wind Speed</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- <ul class="comparisonbutton"> -->
+                <div class="navbar-nav">
+                    <a href="comparisonpage.html" class="nav-item nav-link">Comparison</a>
+                </div>
+                <div class="navbar-nav">
+                    <a href="datapage" class="nav-item nav-link">Data</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class = "visualization col-lg-11">
+                <h1 class="title">Comparison: Latitude vs. X</h1>
+                <p>Click any plot to get an in-depth analysis.</p>
+                <div class ="row visuals justify-content-between">
+                    <div class= "col-lg-2.5 eachplot">
+                        <h1 class="subheading">vs. Max Temperature</h1>
+                        <a class="plotlink" href="visualizationpageone.html">
+                            <img class="img2" src="Resources/assets/images/Fig1.png" title="Figure 1 link" width="350" height="300" />
+                        </a>
+                    </div>    
+                    <div class= "col-lg-2.5 eachplot">
+                        <h1 class="subheading">vs. Humidity</h1>
+                        <a class="plotlink" href="visualizationpagetwo.html">
+                            <img class="img2" src="Resources/assets/images/Fig2.png" title="Figure 2 link" width="350" height="300" />
+                        </a>
+                    </div>
+                    <div class= "col-lg-2.5 eachplot">
+                        <h1 class="subheading">vs. Cloudiness</h1>
+                        <a class="plotlink" href="visualizationpagethree.html">
+                            <img class="img2" src="Resources/assets/images/Fig3.png" title="Figure 3 link" width="350" height="300" />
+                        </a>
+                    </div>
+                    <div class= "col-lg-2.5 eachplot">
+                        <h1 class="subheading">vs. Wind Speed</h1>
+                        <a class="plotlink" href="visualizationpagethree.html">
+                            <img class="img2" src="Resources/assets/images/Fig4.png" title="Figure 4 link" width="350" height="300" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>
