@@ -10,9 +10,9 @@ List of Assignments
 7. H7_SQL
 8. H11_web
 9. H12_webscraping
-10.H14_javascript
-11.H15_interactivevisualization
-12.H16_d3
-13.H17_leaflet
-14.H19_tableau
+10. H14_javascript
+11. H15_interactivevisualization
+12. H16_d3
+13. H17_leaflet
+14. H19_tableau
 
