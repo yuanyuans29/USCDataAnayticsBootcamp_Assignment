@@ -4,39 +4,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge；chrome=1">
     <title>summary</title>
-    <!-- !-- <link re<l="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous"> --> -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- !-- <link re<l="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous"> -->
+    -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <style>
         /* h1 heading tag */
         * {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: rgb(224, 223, 223);
         }
+
         .navbar {
             /* margin-top: 0; */
             /* margin-bottom: 20px; */
             height: 100px;
-            background-color:whitesmoke;
-            position:relative;
+            background-color: whitesmoke;
+            position: relative;
 
-            }
+        }
 
         .navbar-brand {
             font-size: 40px;
-            font-weight:700;
-            color:whitesmoke;
+            font-weight: 700;
+            color: whitesmoke;
             text-align: center;
-            display:block;
-            background-color:rgb(71, 114, 71);
+            display: block;
+            background-color: rgb(71, 114, 71);
             margin-left: 100px;
-            height:100px;
+            height: 100px;
             width: 300px;
             padding: 16px;
-            border: none; 
-            position:relative;
+            border: none;
+            position: relative;
         }
+
         /* .navbarCollapse {
             display: inline-block;
             text-align: center;
@@ -50,19 +54,21 @@
             margin-right: 20px;
             background-color:white;
         } */
-            .navbar-collapse {
-                background-color: whitesmoke;
-            }
-            .dropdown {
-                background-color: whitesmoke;
-                position: relative;
-                display: inline-block;
-            }
-            .navbar-nav {
+        .navbar-collapse {
+            background-color: whitesmoke;
+        }
+
+        .dropdown {
+            background-color: whitesmoke;
+            position: relative;
+            display: inline-block;
+        }
+
+        .navbar-nav {
             /* font-size: 20px;
             color:gray; */
-            font-weight:700;
-            height:100px;
+            font-weight: 700;
+            height: 100px;
             /* width:100px; */
             margin-right: 30px;
             text-align: right;
@@ -71,18 +77,19 @@
             position: relative;
             display: inline-block;
             background-color: whitesmoke;
-           }
-            /* .navbar-brand,.navbar-nav {
+        }
+
+        /* .navbar-brand,.navbar-nav {
                 display: inline;
                 text-align: center;
                 /* position: relative; */
-            /* .navbar-brand {
+        /* .navbar-brand {
                 float:left;
             }
             .navbar-nav {
                 float:right;
             }  */
-                /* a {
+        /* a {
         margin-bottom: 15px;
         font-size: 15px;
         color: gray;
@@ -101,26 +108,32 @@
         } */
 
         .dropdown-menu {
-        display:none;
-        position: absolute;
-        background-color: whitesmoke;
-        min-width: 160px;
-        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-        z-index: 1;
+            display: none;
+            position: absolute;
+            background-color: whitesmoke;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
         }
 
         .dropdown-menu a {
-        color: gray;
-        padding: 12px 16px;
-        text-decoration: none;
-        display: block;
+            color: gray;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
         }
 
-        .dropdown-menu a:hover {background-color: whitesmoke;}
+        .dropdown-menu a:hover {
+            background-color: whitesmoke;
+        }
 
-        .dropdown:hover .dropdown-menu {display: block;}
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
 
-        .dropdown:hover .dropdown-toggle {background-color: whitesmoke;}
+        .dropdown:hover .dropdown-toggle {
+            background-color: whitesmoke;
+        }
 
         /* .comparisonbutton {
             background-color: whitesmoke;
@@ -128,48 +141,53 @@
         .databutton {
             color:gray;
             background-color: whitesmoke;
-        } */ 
+        } */
         .summaryblock {
             margin-top: 40px;
             margin-left: 40px;
-            margin-right:10px;
+            margin-right: 10px;
             margin-bottom: 0;
             height: 600px;
             background-color: whitesmoke;
-            padding:10px
+            padding: 10px
         }
+
         .img1 {
-            margin-top:20px;
+            margin-top: 20px;
             /* float: left; */
-            }
+        }
+
         p {
             margin-top: 20px;
-            margin-bottom:30px;
+            margin-bottom: 30px;
             font-size: 20px;
             color: gray;
-            line-height:25px;
+            line-height: 25px;
             text-align: left;
             background-color: whitesmoke;
             padding: 2%;
         }
+
         .summary {
-            margin-top:40px;
-            margin-bottom:20px;
-            color:rgb(54, 107, 54);
+            margin-top: 40px;
+            margin-bottom: 20px;
+            color: rgb(54, 107, 54);
             font-size: 50px;
             text-align: left;
             font-weight: 700;
             background-color: whitesmoke;
-             }
+        }
+
         .subheading {
-            margin-top:60px;
-            margin-bottom:10px;
-            color:rgb(54, 107, 54);
+            margin-top: 60px;
+            margin-bottom: 10px;
+            color: rgb(54, 107, 54);
             font-size: 40px;
             text-align: left;
             font-weight: 700;
             background-color: whitesmoke;
         }
+
         .visualization {
             margin-top: 40px;
             margin-left: 20px;
@@ -177,9 +195,10 @@
             height: 580px;
             background-color: whitesmoke;
         }
+
         .img2 {
-            margin:0;
-            }
+            margin: 0;
+        }
     </style>
 </head>
 
@@ -191,11 +210,12 @@
             <!-- Main  -->
             <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
                 <div class="navbar-nav">
-                <!-- <ul class="plotbutton"> -->
+                    <!-- <ul class="plotbutton"> -->
                     <div class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href ="visualizationpageone.html">Plots</a>
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown"
+                            href="visualizationpageone.html">Plots</a>
                         <div class="dropdown-menu">
-                    <!-- <div class="menu" > -->
+                            <!-- <div class="menu" > -->
                             <a class="dropdown-item" href="visualizationpageone.html">Max Temperature</a>
                             <a class="dropdown-item" href="visualizationpagetwo.html">Humidity</a>
                             <a class="dropdown-item" href="visualizationpagethree.html">Cloudiness</a>
@@ -222,36 +242,46 @@
     <!-- Mars Data -->
     <div class="container-fluid">
         <div class="row">
-            <div class = "summaryblock col-lg-6 col-sm-12">
+            <div class="summaryblock col-lg-6 col-sm-12">
+                <div>
                 <h1 class="summary">Summary: Latitude vs. X</h1>
-                <img class="img1 float-left" src="Resources/assets/images/Fig1.png" title="plot example" width="400" height="400" ALIGN=”left”/>
+                <img class="img1 float-left" src="Resources/assets/images/Fig1.png" title="plot example" width="400"
+                    height="400" ALIGN=”left” />
                 <p>The purpose of this project was to analyze how weather changes as you get closer
-                    to the equator. To accomplish this analysis, we first pulled data from the OpenWeatherMap API to assemble
+                    to the equator. To accomplish this analysis, we first pulled data from the OpenWeatherMap API to
+                    assemble
                     a dataset on over 500 cities.
                 </p>
                 <p>After assembling the dataset, we used Matplotlib to plot various aspects of the weather vs.
-                    latitude. Factors we looked as included temperature, cloudiness, wind speed, and humidity. This site provides 
-                    the source data and visualizations created as part of the analysis, as well as explanations and descriptions of any
-                    trends and correlations witnessed. 
+                    latitude. Factors we looked as included temperature, cloudiness, wind speed, and humidity. This site
+                    provides
+                    the source data and visualizations created as part of the analysis, as well as explanations and
+                    descriptions of any
+                    trends and correlations witnessed.
                 </p>
             </div>
-            <div class = "visualization col-lg-5 col-sm-12">
+            <div class="visualization col-lg-5 col-sm-12">
                 <h4 class="subheading">Visualizations</h4>
-                        <img class="img2 float-left" src="Resources/assets/images/Fig1.png" title="Figure 1 link" width="300" height="220" />
-                        <img class="img2 float-right" src="Resources/assets/images/Fig3.png" title="Figure 2 link" width="300" height="220" />
-                        <img class="img2 float-left" src="Resources/assets/images/Fig2.png" title="Figure 3 link" width="300" height="220" />
-                        <img class="img2 float-right" src="Resources/assets/images/Fig4.png" title="Figure 4 link" width="300" height="220" />
-            </div>
-            <div class = "visualization col-sm-12">
-                    <h4 class="subheading">Visualizations</h4>
-                            <img class="img2 float-left" src="Resources/assets/images/Fig1.png" title="Figure 1 link" width="100" height="100" />
-                            <img class="img2 float-right" src="Resources/assets/images/Fig3.png" title="Figure 2 link" width="100" height="100" />
-                            <img class="img2 float-left" src="Resources/assets/images/Fig2.png" title="Figure 3 link" width="100" height="100" />
-                            <img class="img2 float-right" src="Resources/assets/images/Fig4.png" title="Figure 4 link" width="100" height="100" />
+                <!-- <div class="container col-md-2"> -->
+                    <img class="img2 float-left" src="Resources/assets/images/Fig1.png" title="Figure 1 link"
+                        width="300" height="220" />
+                <!-- </div>
+                <div class="container col-md-2"> -->
+                    <img class="img2 float-right" src="Resources/assets/images/Fig3.png" title="Figure 2 link"
+                        width="300" height="220" />
+                <!-- </div>
+                <div class="container col-md-2"> -->
+                    <img class="img2 float-left" src="Resources/assets/images/Fig2.png" title="Figure 3 link"
+                        width="300" height="220" />
+                <!-- </div>
+                <div class="container col-md-2"> -->
+                    <img class="img2 float-right" src="Resources/assets/images/Fig4.png" title="Figure 4 link"
+                        width="300" height="220" />
+                <!-- </div> -->
+                </div>
             </div>
         </div>
     </div>
 </body>
 
 </html>
-
